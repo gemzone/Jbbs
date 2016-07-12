@@ -19,9 +19,17 @@
 
 
 <xsl:template name="script">
+
 	
-	<script src="./js/jquery-3.0.0.min.js"></script>
+	<!-- <script src="./js/jquery-3.0.0.min.js"></script> no bootstrap -->
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	
+	<script src="./js/bootstrap.min.js"></script>
+	
 	<script src="./js/system.js"></script>
+	
+	
+	
 	<!-- <script src="./js/jquery.i18n.properties.js"></script>
 	<script src="./js/define.js"></script>
 	<script src="./js/function.js"></script> 
@@ -29,6 +37,8 @@
 
 
 <xsl:template name="stylesheet">
+	<link rel="stylesheet" href="./css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./css/bootstrap-theme.css" />
 	<link rel="stylesheet" href="./css/system.css" /></xsl:template>
 
 
@@ -39,9 +49,11 @@
  -->
 
 
+<xsl:template name="tinymce_script">
+<script src="./js/tinymce/tinymce.min.js"></script></xsl:template>
 
 <xsl:template name="tinymce_editor">
-<script src="./js/tinymce/tinymce.min.js"></script>
+
 <script>tinymce.init({ selector:'textarea' });</script>
 <textarea>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</textarea>
 </xsl:template>
