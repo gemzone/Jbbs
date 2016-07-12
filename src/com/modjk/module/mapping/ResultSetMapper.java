@@ -142,9 +142,15 @@ public class ResultSetMapper<T>
 		
 		return getDeclaredFields(fields, clazz.getSuperclass());
 	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public ArrayList<T> mapRersultSetToObject(ResultSet rs, Class clazz, RowItemFinishCallback<T> rowItemFinish)
+	
+	@SuppressWarnings({ "rawtypes" })
+	public ArrayList<T> resultSetToList(ResultSet rs, Class clazz)
+	{
+		return resultSetToList(rs, clazz, null);
+	}
+						
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public ArrayList<T> resultSetToList(ResultSet rs, Class clazz, RowItemFinishCallback<T> rowItemFinish)
 	{
 		ArrayList<T> outputList = new ArrayList<>();
 		try
@@ -221,5 +227,91 @@ public class ResultSetMapper<T>
 		}
 		
 		return outputList;
+	}
+	
+	
+	
+	
+
+	@SuppressWarnings({ "rawtypes" })
+	public T resultSetToObject(ResultSet rs, Class clazz)
+	{
+		return resultSetToObject(rs, clazz, null);
+	}
+						
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public T resultSetToObject(ResultSet rs, Class clazz, RowItemFinishCallback<T> rowItemFinish)
+	{
+		T bean = null;
+		
+		try
+		{
+			bean = (T) clazz.newInstance();
+			// make sure resultset is not null
+			if (rs != null)
+			{
+				// get the resultset metadata
+				ResultSetMetaData rsmd = rs.getMetaData();
+
+				// get all the attributes of Class clazz
+				ArrayList<Field> fields = getDeclaredFields(new ArrayList<>(), clazz);
+				
+				if (rs.next())
+				{
+					for (int _iterator = 0; _iterator < rsmd.getColumnCount(); ++_iterator)
+					{
+						// get the SQL column name
+						String columnName = rsmd.getColumnName(_iterator + 1);
+						int columnType = rsmd.getColumnType(_iterator + 1);
+
+						// get the value of the SQL column
+						Object columnValue = rs.getObject(_iterator + 1);
+
+						// iterating over clazz attributes to check
+						// if any attribute has 'Column' annotation with matching 'name' value
+						for (Field field : fields)
+						{
+							if (field.isAnnotationPresent(Column.class))
+							{
+								Column column = field.getAnnotation(Column.class);
+								if (column.name().equalsIgnoreCase(columnName))
+								{
+									this.setProperty(bean, field, columnType, columnValue);
+									break;
+								}
+							}
+							else if (field.getName().equalsIgnoreCase(columnName))
+							{
+								this.setProperty(bean, field, columnType, columnValue);
+								break;
+							}
+						} // EndOf for(Field field : fields)
+					}// EndOf for(_iterator...)
+					
+					if (rowItemFinish != null)
+					{
+						rowItemFinish.call(bean);
+					}
+				} // EndOf while(rs.next())
+			}
+			else
+			{
+				bean = (T) clazz.newInstance();
+			}
+		}
+		catch (IllegalAccessException e)
+		{
+			e.printStackTrace();
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		catch (InstantiationException e)
+		{
+			e.printStackTrace();
+		}
+		
+		return bean;
 	}
 }
