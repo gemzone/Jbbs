@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <Resource auth="Container"
+	    driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+	    name="JNK" 
+		username="jnk" 	    
+	    password="poiu0987"
+	    type="javax.sql.DataSource"
+	    factory="com.zaxxer.hikari.HikariJNDIFactory"
+	    jdbcUrl="jdbc:sqlserver://192.168.0.19:1433;DatabaseName=JBBS"
+	    maximumPoolSize="1"
+	    connectionTestQuery="SELECT 1" 
+	    whenExhaustedAction="0" />
+
+</Context>
