@@ -6,7 +6,6 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -127,6 +126,60 @@ public class ResultSetMapper<T>
 			e.printStackTrace();
 		}
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public T resultSetForMapping(ResultSet rs, Class clazz)
+	{
+		T bean = null;
+		try
+		{
+			bean = (T) clazz.newInstance();
+			if (rs != null)
+			{
+				ResultSetMetaData rsmd = rs.getMetaData();
+				ArrayList<Field> fields = getDeclaredFields(new ArrayList<>(), clazz);
+				for (int _iterator = 0; _iterator < rsmd.getColumnCount(); ++_iterator)
+				{
+					// get the SQL column name
+					String columnName = rsmd.getColumnName(_iterator + 1);
+					int columnType = rsmd.getColumnType(_iterator + 1);
+	
+					// get the value of the SQL column
+					Object columnValue = rs.getObject(_iterator + 1);
+	
+					// iterating over clazz attributes to check
+					// if any attribute has 'Column' annotation with matching 'name' value
+					for (Field field : fields)
+					{
+						if (field.isAnnotationPresent(Column.class))
+						{
+							Column column = field.getAnnotation(Column.class);
+							if (column.name().equalsIgnoreCase(columnName))
+							{
+								this.setProperty(bean, field, columnType, columnValue);
+								break;
+							}
+						}
+						else if (field.getName().equalsIgnoreCase(columnName))
+						{
+							this.setProperty(bean, field, columnType, columnValue);
+							break;
+						}
+					} // EndOf for(Field field : fields)
+				}// EndOf for(_iterator...)
+			}
+			else
+			{
+				bean = (T) clazz.newInstance();
+			}
+		}
+		catch(Exception e)
+		{
+			logger.error( e.getMessage() );
+		}
+		return bean;
+	}
+	
 	
 	@SuppressWarnings("rawtypes")
 	public ArrayList<Field> getDeclaredFields(ArrayList<Field> fields, Class clazz)
