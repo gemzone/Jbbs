@@ -1,0 +1,54 @@
+/*
+@font-face { font-family: 'Daum_Regular';src: url('../ttf/Daum_Regular.ttf')  format('truetype'); }
+.daum { font-family:Daum_Regular !important; font-weight:normal; }
+*/
+body { -webkit-text-size-adjust:none;-webkit-touch-select:none; }
+body,input,textarea,select,button,table,th,td { font-family: AppleGothic,'Malgun Gothic',Dotum,Gulim,Helvetica,NanumGothic !important; }
+img{ border:0px;vertical-align: middle; }
+/*
+input { padding:5px;font-size:15px;border:solid 1px #d2d2d2; }
+select { padding:5px 3px;font-size:15px; border:solid 1px #d2d2d2; }
+textarea { padding:5px 3px;font-size:15px; border:solid 1px #d2d2d2; }
+*/
+h1, h2, h3, h4, h5, h6 , p{ font-family: "Yoon Gothic", "Helvetica Neue", "Helvetica", "Dotum", "Arial", "Verdana", "sans-serif"; }
+
+input[type=checkbox] {
+	-ms-transform: scale(2); /* IE */
+	-moz-transform: scale(2); /* FF */
+	-webkit-transform: scale(2); /* Safari and Chrome */
+	-o-transform: scale(2); /* Opera */
+	padding: 10px;
+	border: 1px solid #d2d2d2;
+}
+
+/*
+	#header { height: 36px; background-color:#3e343e; position: relative; z-index: 1; } 
+	#content-box { min-height: 100%; margin: -36px 0 -41px 0px; } 
+	*html #content-box { height: 100%; } 
+	#content { padding: 41px 5px 41px 210px; min-height:300px;} 
+	#footer { height:30px;overflow: hidden;text-align:center;padding-top:10px; border-top: 1px solid #BFC0C0;background-color: #F8F8F9;color: #7E7E7E; } 
+	#loading{ z-index:201;width:40px; height:40px;position:absolute;background-repeat:no-repeat; background-position:47% 47%; border:1px solid #ccc;overflow:hidden; padding:5px 10px 10px 10px; background-color:#fff; -moz-border-radius:5px; border-radius:5px; background-image:url('../img/loading.gif'); }
+	#win{ z-index:202;position:absolute;overflow:hidden; border:1px solid #ccc;overflow:hidden; padding:5px 10px 10px 10px; background-color:#fff; font-size:12px; }
+*/
+
+/* UI Object */
+
+/*
+
+#wrap{margin:0 auto;_text-align:left}
+#header{
+	height:75px;max-height:75px;
+	width:1140px;
+	padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;
+	background-color:blue; opacity:0.1;
+}
+#container{
+	display:inline-block;width:100%;
+	margin-top:75px;
+
+}
+#container:after{display:block;clear:both;content:''}
+#content{float:left;width:800px}
+.aside{float:right;width:295px; padding:0px 0px 0px 5px;}
+#footer{width:100%}
+*/

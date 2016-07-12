@@ -81,8 +81,6 @@ public class Test extends HttpServlet
 			{
 				logger.debug( u.name );
 				logger.debug(  Mapper.toJSONObject(u).toString() ) ;
-				
-				
 			}
 		}
 
