@@ -9,7 +9,7 @@
 	    type="javax.sql.DataSource"
 	    factory="com.zaxxer.hikari.HikariJNDIFactory"
 	    jdbcUrl="jdbc:sqlserver://192.168.0.19:1433;DatabaseName=JBBS"
-	    maximumPoolSize="1"
+	    maximumPoolSize="2"
 	    connectionTestQuery="SELECT 1" 
 	    whenExhaustedAction="0" />
 
