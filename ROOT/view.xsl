@@ -8,7 +8,7 @@
 
 <!-- </head> -->
 <!-- <body> -->
- 	<div xmlns="http://www.w3.org/1999/xhtml">
+ 	<div xmlns="http://www.w3.org/1999/xhtml" style="padding:20px;">
  	
  	
  	<link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -16,7 +16,7 @@
 	<script src="./js/jquery-1.12.4.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/tinymce/tinymce.min.js"></script>
-	<script>tinymce.init({ selector:'textarea' });</script>
+
  
  <!-- 
 		<div class="row">
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		 -->
-		<table class="table small" style="word-wrap:break-word;table-layout: fixed;">
+		<table class="table small" style="word-wrap:break-word;table-layout:fixed;">
 			<thead>
 				<tr style="background-color:#F9F9F9;">
 					<th colspan="3">제목</th>
@@ -51,7 +51,7 @@
 				</tr>
 				<tr>
 					<td colspan="3">
-						<div style="overflow:auto;word-wrap: break-word;width:99%;">
+						<div style="overflow:auto;word-wrap: break-word;">
 						text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
 						<br />
 					
@@ -96,134 +96,111 @@
 			</tbody>
 			<tfoot>
 				<tr>
-					<td colspan="3">내용 테스트내용 테스트내용 테스트내용 테스트</td>
+					<td colspan="3">프로필 내용정도 나오는 부분</td>
 				</tr>
 				<tr>
 					<td class="col-md-4">
 						<div class="btn-group">
-							<button type="button" class="btn btn-default">목록보기</button>
+							<button type="button" class="btn btn-default btn-sm">목록보기</button>
 						</div>
 					</td>
 					<td class="col-md-4">
 					</td>
 					<td class="col-md-4" style="text-align:right;">
 						<div class="btn-group">
-							<button type="button" class="btn btn-default">수정하기</button>
-							<button type="button" class="btn btn-default">삭제하기</button>
+							<button type="button" class="btn btn-default btn-sm">수정하기</button>
+							<button type="button" class="btn btn-default btn-sm">삭제하기</button>
 						</div>
 					</td>
 				</tr>
 			</tfoot>
 		</table>
 		
-		코멘트 스타일2
-		<div class="panel panel-default">
-			<div class="panel-heading">Panel Header</div>
-			<div class="panel-body">Panel Content</div>
-		</div>
-		
-		코멘트 스타일1 
-		<!-- comment 
-		<table class="table table-condensed small" style="word-wrap:break-word;table-layout: fixed;">
-			<tbody>
-				<tr>
-					<td class="col-sm-2">
-						<strong>name</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-						테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다
-					</td>
-				</tr>
-				<tr>
-					<td class="col-sm-2">
-						<strong>namenamename</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-						테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다
-					</td>
-				</tr>
-												<tr>
-					<td class="col-sm-2">
-						<strong>namenamename</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-						테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다
-					</td>
-				</tr>
-				<tr>
-					<td class="col-sm-2">
-						<strong>namenamename</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-						테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다
-					</td>
-				</tr>
-												<tr>
-					<td class="col-sm-2">
-						<strong>namenamename</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-					테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다	
-					</td>
-				</tr>
-				<tr>
-					<td class="col-sm-2">
-						<strong>namenamename</strong>
-						
-						<span>2016-07-13 21:42:12</span>
-					</td>
-					<td class="col-md-8">
-						text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
-					</td>
-				</tr>				
-			</tbody>
-		</table>
-		-->
+		<div style="border-top:1px solid #ddd;">
+			<div class="row-fluid" style="border-bottom:1px solid #ddd;padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+				<div class="col-sm-2">
+					<strong>name</strong>
+				</div>
+				<div class="col-sm-10">
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+				</div>
+			</div>
 	
-		
-		<div class="panel panel-default">
-			<div class="panel-heading">comment</div>
-			<div class="panel-body">
-				<div class="form-group">
-					<label for="usr">이름:</label>
-					<input type="text" class="form-control small" id="usr" />
+			<div class="row-fluid" style="border-bottom:1px solid #ddd;padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+				<div class="col-sm-2">
+					<strong>name</strong>
 				</div>
-				<div class="form-group">
-					<label for="pwd">비밀번호:</label>
-					<input type="password" class="form-control small" id="pwd" />
+				<div class="col-sm-10">
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
 				</div>
-		
-				<div class="form-group">
-					<label for="pwd">내용:</label>
-					<textarea id="comment"></textarea>
+			</div>
+	
+			<div class="row-fluid" style="border-bottom:1px solid #ddd;padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+				<div class="col-sm-2">
+					<strong>name</strong>
 				</div>
-			
-				<button type="button" class="btn btn-default btn-block">write</button>
+				<div class="col-sm-10">
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+					text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;text&#160;
+				</div>
+			</div>
+	
+			<div class="row-fluid" style="border-bottom:1px solid #ddd;padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+				<div class="col-sm-2">
+					comment
+				</div>
+				<div class="col-sm-10">
+				<!-- 
+					<div class="form-group">
+						<label for="usr">이름:</label>
+						<input type="text" class="form-control small" id="usr" />
+					</div>
+					<div class="form-group">
+						<label for="pwd">비밀번호:</label>
+						<input type="password" class="form-control small" id="pwd" />
+					</div>
+			 -->
+			 
+			 		<div class="col-xs-10">
+			 			<textarea class="form-control" rows="5" id="comment" style="resize:none;"></textarea>
+					</div>
+					<div class="col-xs-2">
+					  <button type="button" class="btn btn-default btn-block btn-sm">write</button>
+					</div>
+			 
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row-fluid" style="padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+
+			<div class="col-md-6" style="padding-left:0px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-sm">목록보기</button>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<!-- 
+				<div class="btn-group text-right">
+					<button type="button" class="btn btn-default btn-sm">수정하기</button>
+					<button type="button" class="btn btn-default btn-sm">삭제하기</button>
+				</div>
+				 -->
 			</div>
 		</div>
-	
-	
-		<div class="row-fluid">
-			<div class="col-sm-5" style="padding-left:0px;">
-				<button type="button" class="btn btn-default">목록보기</button>
-			</div>
-			<div class="col-sm-2"></div>
-			<div class="col-sm-5" style="text-align:right;padding-right:0px;">
-				
-			</div>
-		</div>
-	
-	
+
 	</div>
 	
 	

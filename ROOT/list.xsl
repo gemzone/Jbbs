@@ -17,8 +17,7 @@
 	<script src="./js/jquery-1.12.4.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
  
-	<div xmlns="http://www.w3.org/1999/xhtml">
-		버전 2
+	<div xmlns="http://www.w3.org/1999/xhtml" style="padding:20px;">
 <!-- 
 			<div class="row">
 				<div class="col-xs-3">
@@ -84,13 +83,12 @@
 						<td>132</td>
 					</tr>
 				</tbody>
-				
 				<tfoot>
 					<tr>
 						<td colspan="5">
 							<div class="row-fluid">
 								<div class="col-sm-5" style="padding-left:0px;">
-									<button type="button" class="btn btn-default">글쓰기</button>
+									<button type="button" class="btn btn-default btn-sm">글쓰기</button>
 								</div>
 								<div class="col-sm-2"></div>
 								<div class="col-sm-5" style="text-align:right;padding-right:0px;">
