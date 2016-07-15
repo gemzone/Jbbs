@@ -10,12 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.modjk.jbbs.data.UserJDBCTemplate;
 import com.modjk.module.Context;
+import com.modjk.test.servlet.Test;
 
 @WebServlet("/login.do")
 public class LoginController extends HttpServlet
 {
+	private static final Logger logger = LoggerFactory.getLogger(Test.class);
+	
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -71,21 +77,19 @@ public class LoginController extends HttpServlet
 		JSONObject json = new JSONObject();
 		
 		
-//		HttpSession session = request.getSession();
-//		 (Object)session.getAttribute("user_id");
-//		
-//		
-//		
-//		DataSource ds = (DataSource)Context.lookup("JNK");
-//		UserJDBCTemplate userJDBCTemplate = new UserJDBCTemplate();
-//		userJDBCTemplate.setDataSource(ds);
-//		
-//		
-//		
-//		userJDBCTemplate.login(userId, password);
-//		
-//		
-//		
+		HttpSession session = request.getSession();
+		Integer userId = (Integer)session.getAttribute("user_id");
+		
+		
+		logger.debug( "session user_id: " + userId );
+		
+		DataSource ds = (DataSource)Context.lookup("JNK");
+		UserJDBCTemplate userJDBCTemplate = new UserJDBCTemplate();
+		userJDBCTemplate.setDataSource(ds);
+		
+		// userJDBCTemplate.login(userId, password);
+		
+		
 		
 		
 		
