@@ -17,11 +17,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
+import com.modjk.jbbs.data.Result;
+import com.modjk.jbbs.data.ResultMapper;
 import com.modjk.jbbs.data.User;
-import com.modjk.jbbs.data.mapping.UserMapper;
+import com.modjk.jbbs.data.UserJDBCTemplate;
+import com.modjk.jbbs.data.UserMapper;
 import com.modjk.module.Context;
 import com.modjk.module.mapping.Column;
 import com.modjk.module.mapping.Entity;
@@ -60,35 +68,42 @@ public class Test extends HttpServlet
 	
 		// ------------------------------------------------------------------------------------
 		
-		DataSource dataSource = (DataSource)Context.lookup("JNK");
-		JdbcTemplate jdbcTemplateObject = new JdbcTemplate(dataSource);
+		DataSource ds = (DataSource)Context.lookup("JNK");
 		
-		// List<User> students = jdbcTemplateObject.query("SELECT * FROM [dbo].[jnk_user]", new UserMapper());
+		UserJDBCTemplate userJDBCTemplate = new UserJDBCTemplate();
+		userJDBCTemplate.setDataSource(ds);
+		
+		
+		Long userId = userJDBCTemplate.create("abcd", "123123", "name", "test@address.com", "comment");
+		
+		User user = userJDBCTemplate.get(userId);
+		
+		
+		logger.debug(  user.name + " " + user.email );
+		
+		
+//		User user = jdbcTemplateObject.queryForObject("SELECT * FROM [dbo].[jnk_user] WHERE user_id = ? ",new Object[]{1},  new UserMapper());
+//		
+//		
+//		//logger.debug(  "" + students.size() );
+//		logger.debug( user.name );
+//		logger.debug(  Mapper.toJSONObject(user).toString() ) ;
+//		
+//		logger.debug( "-------------------");
+//		
+//		{
+//			List<User> user1 = jdbcTemplateObject.query("SELECT * FROM [dbo].[jnk_user] ", new UserMapper());
+//			for( User u : user1 )
+//			{
+//				logger.debug( u.name );
+//				logger.debug(  Mapper.toJSONObject(u).toString() ) ;
+//			}
+//		}
 
-		User user = jdbcTemplateObject.queryForObject("SELECT * FROM [dbo].[jnk_user] WHERE user_id = ? ",new Object[]{1},  new UserMapper());
 		
 		
-		//logger.debug(  "" + students.size() );
-		logger.debug( user.name );
-		logger.debug(  Mapper.toJSONObject(user).toString() ) ;
 		
-		logger.debug( "-------------------");
-		
-		{
-			List<User> user1 = jdbcTemplateObject.query("SELECT * FROM [dbo].[jnk_user] ", new UserMapper());
-			for( User u : user1 )
-			{
-				logger.debug( u.name );
-				logger.debug(  Mapper.toJSONObject(u).toString() ) ;
-			}
-		}
-
-		
-		out.print("ㅇㅅasdfasdfasdfffffffffffffffffasdfasdㅇasdasdㅅ" + user.name);
-		
-		out.append("Served at: ").append(request.getContextPath());
-		
-		
+		// out.append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

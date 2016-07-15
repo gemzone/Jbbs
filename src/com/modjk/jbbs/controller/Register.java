@@ -3,8 +3,6 @@ package com.modjk.jbbs.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Date;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +12,7 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamWriter;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
 /**
  * Servlet implementation class List2
  */
