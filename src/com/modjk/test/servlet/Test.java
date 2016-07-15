@@ -74,13 +74,31 @@ public class Test extends HttpServlet
 		userJDBCTemplate.setDataSource(ds);
 		
 		
-		Long userId = userJDBCTemplate.create("abcd", "123123", "name", "test@address.com", "comment");
+//		Long userId = userJDBCTemplate.create("abcd", "123123", "name", "test@address.com", "comment");
+//		
+//		{
+//			
+//			User user = userJDBCTemplate.get(userId);
+//			
+//			
+//			logger.debug(  user.name + " " + user.email );
+//				
+//		}
 		
-		User user = userJDBCTemplate.get(userId);
+		{
+			User user = userJDBCTemplate.login("test", "321");
+			System.out.println(user);
+		}
 		
 		
-		logger.debug(  user.name + " " + user.email );
 		
+//		List<User> list = userJDBCTemplate.list();
+//		
+//		for( User u : list )
+//		{
+//			logger.debug( u.name );
+//			logger.debug(  Mapper.toJSONObject(u).toString() ) ;
+//		}
 		
 //		User user = jdbcTemplateObject.queryForObject("SELECT * FROM [dbo].[jnk_user] WHERE user_id = ? ",new Object[]{1},  new UserMapper());
 //		

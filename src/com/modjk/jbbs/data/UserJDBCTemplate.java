@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class UserJDBCTemplate implements UserDao
@@ -18,6 +19,8 @@ public class UserJDBCTemplate implements UserDao
 	{
 		this.dataSource = ds;
 		this.jdbcTemplateObject = new JdbcTemplate(this.dataSource);
+		
+		logger.debug("setDataSource");
 	}
 	@Override
 	public long create(String id, String password, String name, String email, String comment)
@@ -50,24 +53,39 @@ public class UserJDBCTemplate implements UserDao
 	@Override
 	public User get(Long userId)
 	{
-		String sql = "SELECT TOP 1 * FROM [Jbbs].[dbo].[jnk_user] WHERE [user_id] = ?";
-		User user = jdbcTemplateObject.queryForObject(sql, new Object[]{ userId },  new UserMapper());
-		return user;
+		try
+		{
+			String sql = "SELECT TOP 1 * FROM [Jbbs].[dbo].[jnk_user] WHERE [user_id] = ?";
+			User user = jdbcTemplateObject.queryForObject(sql, new Object[]{ userId },  new UserMapper());
+			return user;
+		}
+		catch (EmptyResultDataAccessException e) 
+		{
+		   return null;
+		}
 	}
 	
 	@Override
 	public User login(String userId, String password)
 	{
-		String sql = "SELECT TOP 1 * FROM [Jbbs].[dbo].[jnk_user] WHERE [id] = ? AND [password_sha2_512] = HASHBYTES('SHA2_512' , CONVERT(NVARCHAR, ? ) )";
-		User user = jdbcTemplateObject.queryForObject(sql, new Object[]{ userId, password },  new UserMapper());
-		return user;
+		try
+		{
+			String sql = "SELECT TOP 1 * FROM [Jbbs].[dbo].[jnk_user] WHERE [id] = ? AND [password_sha2_512] = HASHBYTES('SHA2_512' , CONVERT(NVARCHAR, ? ) )";
+			User user = jdbcTemplateObject.queryForObject(sql, new Object[]{ userId, password },  new UserMapper());
+			return user;
+		}
+		catch (EmptyResultDataAccessException e) 
+		{
+		   return null;
+		}
 	}
 	
 	@Override
 	public List<User> list()
 	{
-		// TODO Auto-generated method stub
-		return null;
+		List<User> list = jdbcTemplateObject.query("SELECT TOP 10 * FROM [dbo].[jnk_user] WHERE id LIKE '%"+ "abc" +"%' ", new Object[]{ }, new UserMapper());
+		
+		return list;
 	}
 	@Override
 	public void delete(Integer id)
@@ -79,9 +97,6 @@ public class UserJDBCTemplate implements UserDao
 	public void update(Integer id, Integer age)
 	{
 		// TODO Auto-generated method stub
-		
 	}
-	
-	
 	
 }

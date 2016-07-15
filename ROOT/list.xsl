@@ -32,6 +32,49 @@
 				</div>
 			</div>
 			 -->
+			
+			
+			
+			
+			
+				
+			<div class="row-fluid" style="padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
+	
+				<div class="col-md-6" style="padding-left:0px;">
+				
+				
+					<select>
+						<option>TEST1</option>
+						<option>TEST2</option>
+						<option>TEST3</option>
+					</select>
+					<!-- 
+					<div class="dropdown" style="margin-bottom:5px;">
+						<button class="btn btn-default dropdown-toggle btn-sm" type="button"
+							data-toggle="dropdown">
+							카테고리
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">HTML</a>
+							</li>
+							<li>
+								<a href="#">CSS</a>
+							</li>
+							<li>
+								<a href="#">JavaScript</a>
+							</li>
+						</ul>
+					</div>
+					 -->
+				</div>
+				<div class="col-md-6" style="text-align:right;padding-right:0px;">
+					<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="">회원가입</a></div>
+					<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="./login">로그인</a></div>
+				</div>
+			</div>
+			
 			<table class="table table-hover small">
 				<thead>
 					<tr style="background-color:#F9F9F9;">
@@ -58,7 +101,7 @@
 					<tr>
 						<th scope="row">1</th>
 						<td>
-							<a href="#">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
+							<a href="./view">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
 						</td>
 						<td>어드민</td>
 						<td>2016-07-13</td>
@@ -67,7 +110,7 @@
 					<tr>
 						<th scope="row">2</th>
 						<td>
-							<a href="#">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
+							<a href="./view">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
 						</td>
 						<td>어드민</td>
 						<td>2016-07-13</td>
@@ -76,7 +119,7 @@
 					<tr>
 						<th scope="row">3</th>
 						<td>
-							<a href="#">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
+							<a href="./view">테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다 테스트글 입니다</a>
 						</td>
 						<td>어드민</td>
 						<td>2016-07-13</td>
@@ -87,14 +130,69 @@
 					<tr>
 						<td colspan="5">
 							<div class="row-fluid">
-								<div class="col-sm-5" style="padding-left:0px;">
-									<button type="button" class="btn btn-default btn-sm">글쓰기</button>
+								<div class="col-sm-2" style="padding-left:0px;">
+									<button type="button" class="btn btn-default btn-sm">목록보기</button>
 								</div>
-								<div class="col-sm-2"></div>
-								<div class="col-sm-5" style="text-align:right;padding-right:0px;">
+								<div class="col-sm-8" style="text-align:center;">
+								
+									<ul class="pagination" style="margin-top:5px;">
+										<li>
+											<a class="page-link" href="#" aria-label="Previous">
+												<span aria-hidden="true">&#171;</span>
+												<span class="sr-only">Previous</span>
+											</a>
+										</li>
+									
+										<li>
+											<a href="#">1</a>
+										</li>
+										<li class="active">
+											<a href="#">2</a>
+										</li>
+										<li>
+											<a href="#">3</a>
+										</li>
+										<li>
+											<a href="#">4</a>
+										</li>
+										<li>
+											<a href="#">5</a>
+										</li>
+										<li>
+											<a href="#">6</a>
+										</li>
+										<li>
+											<a href="#">7</a>
+										</li>
+										<li>
+											<a href="#">8</a>
+										</li>
+										<li>
+											<a href="#">9</a>
+										</li>
+										
+										<li>
+											<a class="page-link" href="#" aria-label="Next">
+												<span aria-hidden="true">&#187;</span>
+												<span class="sr-only">Next</span>
+											</a>
+										</li>
+										
+									</ul>
+								
+								
+								</div>
+								<div class="col-sm-2" style="text-align:right;padding-right:0px;">
+									<button type="button" class="btn btn-default btn-sm" onclick="location.href='./write';">글쓰기</button>
+									
+									<!-- 
 									<div class="pull-right search"> 
 										<input class="form-control input-sm" type="text" placeholder="search" /> 
+										
+										
+										
 									</div>
+									 -->
 								</div>
 							</div>
 				

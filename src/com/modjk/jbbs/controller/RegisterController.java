@@ -3,8 +3,6 @@ package com.modjk.jbbs.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Date;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,18 +12,19 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamWriter;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
 /**
  * Servlet implementation class List2
  */
-@WebServlet("/list")
-public class List extends HttpServlet
+@WebServlet("/register.do")
+public class RegisterController extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public List()
+	public RegisterController()
 	{
 		super();
 		// TODO Auto-generated constructor stub
@@ -64,7 +63,7 @@ public class List extends HttpServlet
 		{
 			xsw = xmlOutputFactory.createXMLStreamWriter(sw);
 			xsw.writeStartDocument();
-			xsw.writeProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"list.xsl\"");
+			xsw.writeProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"register.xsl\"");
 			xsw.writeStartElement("jbbs");
 
 			xsw.writeEndElement();

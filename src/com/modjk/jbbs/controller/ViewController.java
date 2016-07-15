@@ -15,15 +15,15 @@ import javax.xml.stream.XMLStreamWriter;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-@WebServlet("/view")
-public class View extends HttpServlet
+@WebServlet("/view.do")
+public class ViewController extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public View()
+	public ViewController()
 	{
 		super();
 		// TODO Auto-generated constructor stub
