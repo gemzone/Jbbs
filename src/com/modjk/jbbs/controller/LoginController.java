@@ -81,6 +81,12 @@ public class LoginController extends HttpServlet
 		Integer userId = (Integer)session.getAttribute("user_id");
 		
 		
+		String test = request.getParameter("test");
+		
+		
+		logger.debug("파라메터 : " + test);
+		
+		
 		logger.debug( "session user_id: " + userId );
 		
 		DataSource ds = (DataSource)Context.lookup("JNK");
