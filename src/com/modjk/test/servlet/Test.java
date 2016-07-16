@@ -78,6 +78,8 @@ public class Test extends HttpServlet
 		
 		ObjectMapper mapper = new XmlMapper();
 		
+		// 테스트
+		
 		
 		User user = new User();
 		user.name = "test";
