@@ -1,12 +1,9 @@
 Jbbs
 ===============
-
 jnk bulletin board system
 
 
-System Requirements
-===============
+Requirements: Apache Tomcat 9, SQL Server
 
-- Apache Tomcat9
-- MSSQL
-- 
+
+
