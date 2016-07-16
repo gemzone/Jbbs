@@ -2,20 +2,28 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xml:space="preserve">
 <xsl:output method="html" encoding="utf-8" indent="yes" omit-xml-declaration="yes" doctype-public="html" />
 <xsl:include href="./template.xsl" />
-<xsl:template match="jbbs">
+<xsl:template match="/">
 
-<!-- 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	
 </head>
-<body>
- -->
+<body ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
 	
 	<link rel="stylesheet" href="./css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./css/bootstrap-theme.css" />
 	<script src="./js/jquery-1.12.4.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+ 
+ 
+	<!-- angular -->
+    <script src="./angularjs/angular.min.js"></script>
+    <script src="./angularjs/angular-animate.min.js"></script>
+ 	<!-- loading -->
+	<script src="./angularjs/loading-bar.js"></script>
+    <link href="./angularjs/loading-bar.css" rel="stylesheet" />
+ 	<script src="./angularjs/app.js"></script>
+    <link href="./angularjs/app.css" rel="stylesheet" />
  
 	<div xmlns="http://www.w3.org/1999/xhtml" style="padding:20px;">
 			<!-- 
@@ -197,9 +205,7 @@
 
 
 
-<!-- 
-	
 </body>
-</html> -->
+</html>
 </xsl:template>
 </xsl:stylesheet>

@@ -2,15 +2,13 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xml:space="preserve">
 <xsl:output method="html" encoding="utf-8" indent="yes" omit-xml-declaration="yes" doctype-public="html" />
 <xsl:include href="./template.xsl" />
-<xsl:template match="jbbs">
+<xsl:template match="/">
 
-<!-- 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	
 </head>
 <body>
- -->
 	
 	<link rel="stylesheet" href="./css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./css/bootstrap-theme.css" />
@@ -75,9 +73,8 @@
 
 
 
-<!-- 
 	
 </body>
-</html> -->
+</html>
 </xsl:template>
 </xsl:stylesheet>

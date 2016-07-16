@@ -50,7 +50,7 @@
 
 
 <xsl:template name="tinymce_script">
-<script src="./js/tinymce/tinymce.min.js"></script></xsl:template>
+<script src="./tinymce/tinymce.min.js"></script></xsl:template>
 
 <xsl:template name="tinymce_editor">
 
