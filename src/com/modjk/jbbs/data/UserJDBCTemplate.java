@@ -33,8 +33,8 @@ public class UserJDBCTemplate implements UserDao
 		long identity = 0;
 		{
 			String sql = "SELECT ISNULL(MAX([user_id]), 0) + 1 AS [identity] FROM [dbo].[jnk_user]";
-			Result result = jdbcTemplateObject.queryForObject(sql, new ResultMapper() );
-			identity = result.identity;
+			QueryResult r = jdbcTemplateObject.queryForObject(sql, new QueryResultMapper() );
+			identity = r.identity;
 		}
 		
 		{
@@ -45,7 +45,6 @@ public class UserJDBCTemplate implements UserDao
 			// TODO jdbcTemplateObject.update 실행시 결과 리턴 1 이 어떤의미인지 모름
 			jdbcTemplateObject.update(sql, 
 					identity, groupId, id, password, null, name, email, level, point, comment, isSuperAdmin);
-
 		}
 		return identity;
 	}

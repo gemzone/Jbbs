@@ -4,7 +4,7 @@
  */
 package com.modjk.jbbs.data;
 
-public class User
+public class User extends Result
 {
 	public long user_id; 
 	public int group_id;

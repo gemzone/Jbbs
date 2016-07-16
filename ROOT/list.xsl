@@ -18,7 +18,7 @@
 	<script src="./js/bootstrap.min.js"></script>
  
 	<div xmlns="http://www.w3.org/1999/xhtml" style="padding:20px;">
-<!-- 
+			<!-- 
 			<div class="row">
 				<div class="col-xs-3">
 					글자글자
@@ -32,46 +32,23 @@
 				</div>
 			</div>
 			 -->
-			
-			
-			
-			
-			
 				
 			<div class="row-fluid" style="padding:8px;word-wrap:break-word;table-layout:fixed;overflow:hidden;">
 	
-				<div class="col-md-6" style="padding-left:0px;">
-				
-				
+				<div class="col-sm-4" style="padding-left:0px;">
 					<select>
 						<option>TEST1</option>
 						<option>TEST2</option>
 						<option>TEST3</option>
 					</select>
-					<!-- 
-					<div class="dropdown" style="margin-bottom:5px;">
-						<button class="btn btn-default dropdown-toggle btn-sm" type="button"
-							data-toggle="dropdown">
-							카테고리
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="#">HTML</a>
-							</li>
-							<li>
-								<a href="#">CSS</a>
-							</li>
-							<li>
-								<a href="#">JavaScript</a>
-							</li>
-						</ul>
-					</div>
-					 -->
 				</div>
-				<div class="col-md-6" style="text-align:right;padding-right:0px;">
-					<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="">회원가입</a></div>
-					<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="./login">로그인</a></div>
+				<div class="col-sm-4" style="text-align:center;">
+				
+				</div>
+				
+				<div class="col-sm-4" style="padding-right:0px;text-align:right;">
+						<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="">회원가입</a></div>
+						<div class="text-primary" style="padding:0px 0px 0px 10px;display:inline-block;"><a href="./login">로그인</a></div>
 				</div>
 			</div>
 			
@@ -185,16 +162,19 @@
 								<div class="col-sm-2" style="text-align:right;padding-right:0px;">
 									<button type="button" class="btn btn-default btn-sm" onclick="location.href='./write';">글쓰기</button>
 									
-									<!-- 
-									<div class="pull-right search"> 
-										<input class="form-control input-sm" type="text" placeholder="search" /> 
-										
-										
-										
-									</div>
-									 -->
 								</div>
 							</div>
+		
+					
+							<!-- 
+							<div class="pull-right search"> 
+								<input class="form-control input-sm" type="text" placeholder="search" /> 
+								
+								
+								
+							</div>
+							 -->
+				
 				
 							<!-- <div class="col-md-4"> </div> <div class="col-md-4"> </div> <div 
 								class="col-md-4" style="text-align:right;">  </div> -->

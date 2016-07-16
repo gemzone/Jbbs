@@ -25,6 +25,8 @@ import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.modjk.jbbs.data.Result;
 import com.modjk.jbbs.data.ResultMapper;
 import com.modjk.jbbs.data.User;
@@ -74,6 +76,20 @@ public class Test extends HttpServlet
 		userJDBCTemplate.setDataSource(ds);
 		
 		
+		ObjectMapper mapper = new XmlMapper();
+		
+		
+		User user = new User();
+		user.name = "test";
+		user.comment = "test_comment";
+		String xml = mapper.writeValueAsString(new User());
+	
+		
+//		ObjectMapper xmlMapper = new XmlMapper();
+//		Simple value = xmlMapper.readValue("<Simple><x>1</x><y>2</y></Simple>", Simple.class);
+		
+		logger.debug(xml);
+		
 //		Long userId = userJDBCTemplate.create("abcd", "123123", "name", "test@address.com", "comment");
 //		
 //		{
@@ -85,10 +101,10 @@ public class Test extends HttpServlet
 //				
 //		}
 		
-		{
-			User user = userJDBCTemplate.login("test", "321");
-			System.out.println(user);
-		}
+//		{
+//			User user = userJDBCTemplate.login("test", "321");
+//			System.out.println(user);
+//		}
 		
 		
 		
@@ -118,8 +134,7 @@ public class Test extends HttpServlet
 //			}
 //		}
 
-		
-		
+
 		
 		// out.append("Served at: ").append(request.getContextPath());
 	}

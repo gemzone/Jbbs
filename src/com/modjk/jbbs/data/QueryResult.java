@@ -4,8 +4,8 @@
  */
 package com.modjk.jbbs.data;
 
-public class Result
+public class QueryResult
 {
-	public int error;
-	public String reason;
+	public long identity;
+	public int rowcount;
 }
