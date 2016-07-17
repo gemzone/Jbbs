@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-public interface UserDao
+public interface UserDAO
 {
 	public void setDataSource(DataSource ds);
 	   

@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-public class UserJDBCTemplate implements UserDao
+public class UserJDBCTemplate implements UserDAO
 {
 	private static final Logger logger = LoggerFactory.getLogger(UserJDBCTemplate.class);
 	private DataSource dataSource;
