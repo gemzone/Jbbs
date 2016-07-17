@@ -12,7 +12,7 @@ Javascript (jquery, bootstrap, angularjs)
 
 JavaEE Servlet 3.1+ (spring-jdbc 4.3.1)
 
-SNS (naver, google+)
+SNS (google+)
 
 
 
