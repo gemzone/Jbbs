@@ -17,23 +17,12 @@
 	<meta name="keywords" content="{$keyword}" />
 	<meta name="description" content="{$description}" /></xsl:template>
 
-
 <xsl:template name="script">
-
-	
-	<!-- <script src="./js/jquery-3.0.0.min.js"></script> no bootstrap -->
 	<script src="./js/jquery-1.12.4.min.js"></script>
-	
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.i18n.properties.js"></script>
 	
-	<script src="./js/system.js"></script>
-	
-	
-	
-	<!-- <script src="./js/jquery.i18n.properties.js"></script>
-	<script src="./js/define.js"></script>
-	<script src="./js/function.js"></script> 
-	 --></xsl:template>
+	<script src="./js/jnk-system.js"></script></xsl:template>
 
 
 <xsl:template name="stylesheet">

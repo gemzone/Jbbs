@@ -1,5 +1,5 @@
-var dataXml = "<Elhaz></Elhaz>";
-var rootElementName = "Elhaz";
+var dataXml = "<jbbs></jbbs>";
+var rootElementName = "jbbs";
 
 $(document).ready(function () {
 
