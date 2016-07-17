@@ -35,10 +35,10 @@
     </Manager>
     -->
 	
-	<!-- Client ID -->
-	<Parameter name="naver_client_id" value="smzVAvgWRXkO2Nph2yW6" override="true"/>
-	<!-- Client Secret -->
-	<Parameter name="naver_client_secret" value="ER6SktztYM" override="true"/>
+	<!-- Client ID 
+	<Parameter name="naver_client_id" value="smzVAvgWRXkO2Nph2yW6" override="true"/>-->
+	<!-- Client Secret 
+	<Parameter name="naver_client_secret" value="ER6SktztYM" override="true"/>-->
 
 
 </Context>

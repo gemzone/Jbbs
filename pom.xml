@@ -5,7 +5,7 @@
 	<artifactId>jbbs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>JBBS</name>
+	<name>Jbbs</name>
 	
 	<repositories>
 		<repository>
@@ -16,7 +16,6 @@
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
 	</repositories>
-	
 	
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -192,7 +191,7 @@
 			<artifactId>javassist</artifactId>
 			<version>3.16.1-GA</version>
 		</dependency>
-		<!-- 서블릿 -->
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -210,6 +209,40 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>4.3.1.RELEASE</version>
 		</dependency>
+		
+		
+		
+		
+		
+		<!-- gplus -->
+		
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-plus</artifactId>
+			<version>v1-rev217-1.20.0</version>
+		</dependency>
+		
+		
 		
 	</dependencies>
 

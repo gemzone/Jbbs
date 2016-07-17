@@ -6,11 +6,11 @@
 		<param-name>LangPattern</param-name>
 		<param-value>^[0-9가-힣a-zA-Z\p{InHiragana}\p{InKatakana}\p{InCjkUnifiedIdeographs}\p{InHalfwidthAndFullwidthForms}]{1,12}$</param-value>
 	</context-param>
--->
+
 	<listener>
 		<description>NaverContextManager</description>
 		<listener-class>com.modjk.api.naver.NaverContextManager</listener-class>
-	</listener>
+	</listener>-->
 <!-- 
 	<listener>
 	    <description>HttpSessionAttributeManager</description>
@@ -36,7 +36,7 @@
         <session-timeout>25</session-timeout>
     </session-config>
 	
-	
+	<!-- 
 	<servlet>
 	    <servlet-name>api/naver</servlet-name>
 	    <jsp-file>/api/naver.jsp</jsp-file>
@@ -44,6 +44,17 @@
 	<servlet-mapping>
    		<servlet-name>api/naver</servlet-name>
     	<url-pattern>/api/naver</url-pattern>
+	</servlet-mapping>
+ -->
+
+
+	<servlet>
+	    <servlet-name>api/google</servlet-name>
+	    <jsp-file>/api/google.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+   		<servlet-name>api/google</servlet-name>
+    	<url-pattern>/api/google</url-pattern>
 	</servlet-mapping>
 
 </web-app>
