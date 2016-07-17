@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
 
+	<!-- white list 
+	<Valve allow="10.1.1.126|123.123.123.*" className="org.apache.catalina.valves.RemoteAddrValve"/>
+	-->
+
     <Resource auth="Container"
 	    driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
 	    name="JNK" 
@@ -13,9 +17,28 @@
 	    connectionTestQuery="SELECT 1" 
 	    whenExhaustedAction="0" />
 
-
-
-
+	<ResourceLink global="JNK" name="JNK" type="javax.sql.DataSource"/>
+    
+  	<!-- ELB
+    <Manager className="org.apache.catalina.session.PersistentManager" 
+			maxActiveSessions="-1"
+			saveOnRestart="true">
+		<Store className="org.apache.catalina.session.JDBCStore" 
+			dataSourceName="JNK" 
+			sessionAppCol="app_name" 
+			sessionDataCol="session_data" 
+			sessionIdCol="session_id" 
+			sessionLastAccessedCol="last_access" 
+			sessionMaxInactiveCol="max_inactive" 
+			sessionTable="User_Connection" 
+			sessionValidCol="valid_session" />
+    </Manager>
+    -->
+	
+	<!-- Client ID -->
+	<Parameter name="naver_client_id" value="smzVAvgWRXkO2Nph2yW6" override="true"/>
+	<!-- Client Secret -->
+	<Parameter name="naver_client_secret" value="ER6SktztYM" override="true"/>
 
 
 </Context>

@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0"/>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+<!-- 
+   	<context-param>
+		<param-name>LangPattern</param-name>
+		<param-value>^[0-9가-힣a-zA-Z\p{InHiragana}\p{InKatakana}\p{InCjkUnifiedIdeographs}\p{InHalfwidthAndFullwidthForms}]{1,12}$</param-value>
+	</context-param>
+-->
+	<listener>
+		<description>NaverContextManager</description>
+		<listener-class>com.modjk.api.naver.NaverContextManager</listener-class>
+	</listener>
+<!-- 
+	<listener>
+	    <description>HttpSessionAttributeManager</description>
+	    <listener-class>com.intivsoft.elhaz.core.HttpSessionAttributeManager</listener-class>
+	</listener>
+	
+	<listener>
+	    <description>HttpSessionManager</description>
+	    <listener-class>com.intivsoft.elhaz.core.HttpSessionManager</listener-class>
+	</listener>
+
+	<listener>
+		<description>ContextManager</description>
+		<listener-class>com.intivsoft.elhaz.core.ServletContextManager</listener-class>
+	</listener>
+	
+	<listener>
+		<description>RequestManager</description>
+		<listener-class>com.intivsoft.elhaz.core.ServletRequestManager</listener-class>
+	</listener>
+ -->
+    <session-config>
+        <session-timeout>25</session-timeout>
+    </session-config>
+	
+	
+	<servlet>
+	    <servlet-name>api/naver</servlet-name>
+	    <jsp-file>/api/naver.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+   		<servlet-name>api/naver</servlet-name>
+    	<url-pattern>/api/naver</url-pattern>
+	</servlet-mapping>
+
+</web-app>
