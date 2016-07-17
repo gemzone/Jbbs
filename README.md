@@ -2,6 +2,8 @@ Jbbs
 ===============
 jnk bulletin board system
 
+Specifications
+===============
 Apache Tomcat9+
 
 Sql server 2014+
@@ -16,7 +18,7 @@ SNS (google+)
 
 
 The future will be supported
-
+===============
 Mysql
 
 Postgresql
