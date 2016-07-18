@@ -4,13 +4,13 @@ jnk bulletin board system
 
 Specifications
 ===============
-Apache Tomcat9+
+Apache Tomcat 9+
 
 Sql server 2014+
 
 Javascript (jquery, bootstrap, angularjs)
 
-JavaEE Servlet 3.1+ (spring-jdbc 4.3.1)
+JavaEE Servlet 3.1+ (HikariCP, spring-jdbc 4.3.1)
 
 SNS (google+)
 
